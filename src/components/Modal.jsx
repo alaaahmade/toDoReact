@@ -1,6 +1,8 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
+/* eslint-disable import/prefer-default-export */
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import Input from './Input';
@@ -17,7 +19,7 @@ const style = {
   p: 4,
 };
 
-export function ModalForm({open, setOpen, TaskE}) {
+export function ModalForm({ open, setOpen, TaskE }) {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
@@ -31,9 +33,11 @@ export function ModalForm({open, setOpen, TaskE}) {
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            edit Task: {TaskE.name}
+            edit Task:
+            {' '}
+            {TaskE.name}
           </Typography>
-          <Input type={'Edit'} TaskE={TaskE} />
+          <Input type="Edit" TaskE={TaskE} />
         </Box>
       </Modal>
     </div>
